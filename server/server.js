@@ -35,6 +35,15 @@ app.get("/get", async (req, res) => {
   // res.status(201).send(JSON.stringify("Hello world from express"));
 });
 
+app.get("/gettask", async (req, res) => {
+  const data = await model.getAllTask();
+  console.log(data);
+  res.status(203).send(JSON.stringify(data));
+});
+
+app.post("/createtask", async (req, res) => {
+  console.log(req.body);
+});
 
 // CREATING PORT
 const PORT = process.env.PORT || 4000;

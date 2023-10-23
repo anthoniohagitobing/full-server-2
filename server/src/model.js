@@ -13,4 +13,15 @@ module.exports = {
       })
       .from("account");
   },
+
+  getAllTask() {
+    return knex
+      .select({
+        id: "id",
+        done: "done",
+        to_do: "to_do",
+        due_date: "due_date",
+      })
+      .from("todolist");
+  },
 }
