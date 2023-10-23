@@ -9,7 +9,7 @@
     "dev": "nodemon ./server.js",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
-    "build": "npm install && knex seed:run && knex migrate:latest && cd .. && cd client && npm run build",
+    "build": "npm install && knex seed:run && knex migrate:latest && cd .. && cd client && npx react-scripts build",
     "deploy": "node ./server.js"
   },
   "author": "",
