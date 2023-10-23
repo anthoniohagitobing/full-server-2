@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 // asdf
 const app = express();
@@ -16,6 +17,8 @@ app.use(cors());
 // });
   // manual way of setting cors
   // Source: https://codedamn.com/news/backend/how-to-fix-cors-error
+app.use(express.static(path.join(__dirname, "public")));
+
 
 // IMPORTING MODEL FROM KNEX
 const model = require("./src/model");
