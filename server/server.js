@@ -44,6 +44,7 @@ app.get("/gettask", async (req, res) => {
 app.post("/createtask", async (req, res) => {
   // console.log(req);
   console.log(req.body);
+  console.log(process.env.DB_USER);
   // console.log(res.body);
   res.status(201).send()
 });

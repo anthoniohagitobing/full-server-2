@@ -9,7 +9,8 @@ function App() {
   const [createText, setCreateText] = React.useState("");
 
   async function getTask() {
-    const fetchData = await fetch("http://localhost:4000/gettask");
+    const url = "https://full-stack-2.onrender.com/gettask" || "http://localhost:4000/gettask";
+    const fetchData = await fetch(url);
     const fetchDataProcessed = await fetchData.json();
     console.log(fetchDataProcessed);
     setTaskData(fetchDataProcessed);
