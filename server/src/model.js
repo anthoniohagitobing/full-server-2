@@ -24,4 +24,13 @@ module.exports = {
       })
       .from("todolist");
   },
+
+  createTask(list) {
+    return knex("todolist").insert({
+      id: list.id,
+      done: list.done,
+      to_do: list.to_do,
+      due_date: list.due_date
+    });
+  },
 }
