@@ -17,7 +17,7 @@ app.use(cors());
 // });
   // manual way of setting cors
   // Source: https://codedamn.com/news/backend/how-to-fix-cors-error
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname + "/../client", "public")));
 
 
 // IMPORTING MODEL FROM KNEX
