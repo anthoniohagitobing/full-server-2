@@ -27,7 +27,7 @@ const model = require("./src/model");
 // teset
 
 // SENDING DATA
-app.get("/get", async (req, res) => {
+app.get("/", async (req, res) => {
   // console.log("test");
   const data = await model.getAllAccount();
   console.log(data);
@@ -42,7 +42,10 @@ app.get("/gettask", async (req, res) => {
 });
 
 app.post("/createtask", async (req, res) => {
+  // console.log(req);
   console.log(req.body);
+  // console.log(res.body);
+  res.status(201).send()
 });
 
 // CREATING PORT

@@ -1,0 +1,14 @@
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: yellow;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  justify-content: space-between;
+}
