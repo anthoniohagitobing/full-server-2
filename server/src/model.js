@@ -26,9 +26,9 @@ module.exports = {
   },
 
   createTask(list) {
+    console.log(list);
     return knex("todolist").insert({
-      id: list.id,
-      done: list.done,
+      done: true,
       to_do: list.to_do,
       due_date: list.due_date
     });

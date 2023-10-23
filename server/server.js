@@ -37,13 +37,22 @@ app.get("/", async (req, res) => {
 
 app.get("/gettask", async (req, res) => {
   const data = await model.getAllTask();
-  console.log(data);
+  // console.log(data);
   res.status(203).send(JSON.stringify(data));
 });
 
 app.post("/createtask", async (req, res) => {
-  const inputData = req.body.text;
-  model.createTask(inputData);
+  const inputData = req.body;
+  // console.log(inputData);
+  // console.log("test");
+  // const inputData = {
+  //   to_do: "test6",
+  //   due_date: "2023-11-10"
+  // };
+  await model.createTask(inputData);
+    // you have to await for creating task to
+    // in this case, we are directly send the data inputted, no need to be processed
+
   const data = await model.getAllTask();
   res.status(203).send(JSON.stringify(data));
 });
