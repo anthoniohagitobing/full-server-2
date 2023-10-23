@@ -12,7 +12,7 @@ function App() {
   async function getTask() {
     const url = Boolean(process.env.DATABASE_URL) ? "https://full-stack-2.onrender.com/gettask" : "http://localhost:4000/gettask";
     // const url = "https://full-stack-2.onrender.com/gettask";
-    console.log(Boolean(process.env.DATABASE_URL));
+    console.log(process.env.DATABASE_URL);
     const fetchData = await fetch(url);
     const fetchDataProcessed = await fetchData.json();
     console.log(fetchDataProcessed);
