@@ -10,7 +10,7 @@
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "build": "npm install",
-    "deploy": "node ./server.js"
+    "deploy": "node ./server.js & knex seed:run & knex migrate:latest"
   },
   "author": "",
   "license": "ISC",
